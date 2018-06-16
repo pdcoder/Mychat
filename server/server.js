@@ -12,20 +12,20 @@ var io = socketIO(server);
 io.on('connection',(socket)=>{
 console.log('New user connected');
 
+    socket.on('createMessage',(newEmail)=>{
+    console.log('creaEmail',newEmail);
+        io.emit('newMessage',{
+            from: message.from,
+            text: message.text,
+            createdAt: new Date().getTime()
+        });
+    });
+
+
 socket.on('disconnect',()=>{
     console.log("User was disconnected");
 });
    
-
-socket.on('createMessage',(newEmail)=>{
-    console.log('creaEmail',newEmail);
-    io.emit('newMessage',{
-from: message.from,
-text: message.text,
-createdAt: new Date().getTime()
-    });
-});
-
 });
 
 
