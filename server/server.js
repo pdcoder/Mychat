@@ -16,8 +16,14 @@ socket.on('disconnect',()=>{
     console.log("User was disconnected");
 });
    
-socket.on('createEmail',(newEmail)=>{
+
+socket.on('createMessage',(newEmail)=>{
     console.log('creaEmail',newEmail);
+    io.emit('newMessage',{
+from: message.from,
+text: message.text,
+createdAt: new Date().getTime()
+    });
 });
 socket.emit('newEmail',{
 from: 'prakash@gmail.com',
