@@ -8,6 +8,6 @@ var socket = io();
             console.log("Disconnected from server");
         });
 
-        socket.on('newEmail',function(email){
+        socket.on('newMessage',function(email){
             console.log(email);
         });
