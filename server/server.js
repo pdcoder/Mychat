@@ -25,10 +25,7 @@ text: message.text,
 createdAt: new Date().getTime()
     });
 });
-socket.emit('newEmail',{
-from: 'prakash@gmail.com',
-to: '16383@kiit.ac.in'
-});
+
 });
 
 
