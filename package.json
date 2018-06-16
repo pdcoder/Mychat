@@ -1,0 +1,32 @@
+{
+  "name": "mychat",
+  "version": "1.0.0",
+  "description": "A Chatting app built using Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdcoder/Mychat.git"
+  },
+  "engines": {
+    "node": "8.4.0"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "chat.io"
+  ],
+  "author": "Prakash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pdcoder/Mychat/issues"
+  },
+  "homepage": "https://github.com/pdcoder/Mychat#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
+  }
+}
