@@ -12,8 +12,8 @@ var io = socketIO(server);
 io.on('connection',(socket)=>{
 console.log('New user connected');
 
-    socket.on('createMessage',(newEmail)=>{
-    console.log('creaEmail',newEmail);
+    socket.on('createMessage',(message)=>{
+    console.log('createMessage',message);
         io.emit('newMessage',{
             from: message.from,
             text: message.text,
